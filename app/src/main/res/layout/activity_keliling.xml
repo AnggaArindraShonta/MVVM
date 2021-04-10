@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.mvvm.viewmodel.MainViewModel" />
+    </data>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".view.KelilingActivity">
+
+        <EditText
+            android:text="@={viewmodel.etSisiA}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Sisi A"/>
+
+        <EditText
+            android:text="@={viewmodel.etSisiB}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Sisi B"/>
+
+        <EditText
+            android:text="@={viewmodel.etSisiC}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Sisi C"/>
+
+        <Button
+            android:onClick="@{()-> viewmodel.btnKelilingSegitiga(context)}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hasil keliling segitiga"/>
+
+    </LinearLayout>
+</layout>
